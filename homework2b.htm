@@ -1,0 +1,71 @@
+<html>
+ <head>
+	<!-- Author: 		ABABACAR NDIAYE -->
+	<!-- Date: 			2-10-2020 -->
+	<!-- Class:			CSCI 2240 - Client Side Programming -->
+	<!-- Instructor:	Darren Pearson -->
+
+    <title>Handout 2b - Part 2</title>
+
+	<style type="text/css">
+		body {				background-color: 	lightblue;}
+
+		h1 { 				margin-top: 		30px; }
+
+		#container {		border: 			black solid 5px;
+							background-color:	lightblue;
+							margin:				20px;
+							padding:			20px;
+							width:				300px;
+							height: 			215px;}
+
+		#buttonSection {	clear:				both;
+							margin-left: 		180px;
+							margin-top:			10px;}
+         
+        #button1 {			border: 			solid 1px blue;
+         					border-radius:      5px;}
+
+
+		#bmiChart { 		border: 			black solid 5px;
+							margin-top: 		-185px;
+							margin-left: 		350px;}
+
+	</style>
+
+	<script type="text/javascript">	
+
+		function calcBMI(weight,height) { 
+
+			var weight = document.getElementById("weightInput").value; 
+			var height = document.getElementById("heightInput").value;
+
+			var bmiCalculation = ((weight*703) / (Math.pow(height,2)));
+			var roundedBmi = Math.round(bmiCalculation);
+				
+			document.getElementById("bmiResults").value = roundedBmi;
+		
+			}		
+
+	</script>
+	
+ </head>
+
+	<body>
+
+		<h1>BMI Example</h1>
+			<div id="container">
+				<form action="" method="post" name="clockArea">
+					<p><input type="text" name="weightInput" id="weightInput"/>&nbsp;&nbsp;&nbsp;Weight in pounds</p>
+					<p><input type="text" name="heightInput" id="heightInput"/>&nbsp;&nbsp;&nbsp;Height in inches</p>
+						<div name="buttonSection" id="buttonSection">	
+							<input id="button1" type="button" value="Calculate BMI" onclick="calcBMI()"/>
+ 						</div>
+					<p>BMI Results&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="bmiResults" id="bmiResults"/></p>
+				</form>
+				<img id="bmiChart" src="bmi.jpg" alt="BMI Chart" width="400px" height="250px">
+			</div>		
+  			
+	<body>
+
+</html>
